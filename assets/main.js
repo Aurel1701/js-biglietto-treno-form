@@ -1,32 +1,19 @@
-// Quanti chilometri vuoi percorrere?
-
-const firstname = document.querySelector('btn1').value = ''
-console.log(firstname);
+document.querySelector('.genera').addEventListener("click", clickbutton);
 
 
+function clickbutton(){
+    let firstname = document.querySelector('#btn1').value;
+    let km = document.querySelector('#btn2').value;
+    let age = document.querySelector('#age').value;
+    var ticket = km * 0.21;
+    if (age < 18) {
+        ticket = ticket - (ticket * 20 / 100);
+        
+    } else if (age > 65) {
+        ticket = ticket - (ticket * 40 / 100);
+    }
+    document.querySelector('.risultato').append(`${ticket}`)
 
-
-
-
-const distance = parseInt(prompt('quanti km devi fare?'))
-console.log(distance);
-// quanti anni hai?
-const age = parseInt(prompt('quanti anni hai?'))
-console.log(age);
-// calcolo prezzo del biglietto in base ai km
-var ticket = distance * 0.21;
-
-
-// prezzo per under 18 e over 65
-
-if (age < 18) {
-    ticket = ticket - (ticket * 20 / 100);
-    
-} else if (age > 65) {
-    ticket = ticket - (ticket * 40 / 100);
 }
 
-console.log(ticket.toFixed(2));
-
-document.getElementById('ticket').innerHTML = ticket.toFixed(2)
 
