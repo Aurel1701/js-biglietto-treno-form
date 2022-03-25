@@ -1,3 +1,12 @@
 body{
     background-color: rgba(185, 20, 80, 1);
 }
+.biglietto{
+    background-color: white;
+    height: 200px;
+    
+}
+
+.dati{
+    background-color: white;
+}
